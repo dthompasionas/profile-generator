@@ -31,6 +31,7 @@ In order to use this app, Run in terminal
 If you would like to contribute, push up code to be reviewed.
 
 # Screenshot: 
+![](assets/images/profile-generator-screenshot.png)
 
 # Questions
 Contact me with any questions here:
