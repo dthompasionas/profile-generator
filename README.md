@@ -33,6 +33,9 @@ If you would like to contribute, push up code to be reviewed.
 # Screenshot: 
 ![](assets/images/profile-generator-screenshot.png)
 
+## video
+https://drive.google.com/file/d/1OTWfQ1H3V4Z4e6xhj0cQ3Ez0CU0JUsYB/view
+
 # Questions
 Contact me with any questions here:
 
