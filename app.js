@@ -1,3 +1,5 @@
+
+//required installs and variables
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -12,6 +14,8 @@ const outputPath = path.join(OUTPUT_DIR, 'team.html');
 const render = require('./lib/htmlRenderer');
 
 var teamArray = [];
+
+//question array for manager
 const managerQuestion = [
     {
         type: "input",
@@ -41,7 +45,8 @@ const managerQuestion = [
         choices: ["yes", "no"]
     }]
 
-const employeeQuestion = [
+    //question array for employees
+    const employeeQuestion = [
     {
         type: "input",
         name: "name",
@@ -100,7 +105,7 @@ const employeeQuestion = [
     }
 
 ]
-
+//create manager
 function renderManager(){
     inquirer.prompt(managerQuestion).then(data => {
         let manager = new Manager(data.name, data.id, data.email, data.officeNumber, teamArray.length + 1);
@@ -117,7 +122,7 @@ function renderManager(){
 
 renderManager();
 
-
+//create employee
 function renderEmployee(){
     inquirer.prompt(employeeQuestion).then(data => {
         if(data.employeeTitle === "Engineer"){
@@ -128,6 +133,7 @@ function renderEmployee(){
             let intern = new Intern(data.name, data.id, data.email, data.school, teamArray.length + 1);
             teamArray.push(intern);
         }
+
 
         //run employeeQuestion again if you answer yes in add more employee
         if(data.addTeam === "yes"){
